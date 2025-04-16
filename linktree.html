@@ -202,7 +202,7 @@
     }
 
     .custom-button {
-        background-color: #f5f5f5;
+        background-color: rgba(235, 238, 241, 255); /* Warna baru */
         border-radius: 12px;
         padding: 12px 16px;
         margin: 14px auto; /* Increased from 8px to 14px for more vertical spacing */
@@ -211,7 +211,7 @@
         position: relative;
         transition: all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
         width: calc(100% - 16px); /* Reduced from 32px to 16px for wider buttons */
-        max-width: 560px; /* Reduced from 580px */
+        max-width: 580px; /* Reduced from 580px */
         height: 64px; /* Reduced height */
         text-decoration: none !important;
         border: none; /* Removed border */
@@ -376,7 +376,7 @@
     }
 
     .shop-button {
-        background-color: rgb(235, 238, 241);
+        background-color: rgba(235, 238, 241, 255); /* Warna baru */
         border-radius: 14px;
         padding: 15px;  /* Reduced from 16px */
         margin: 14px auto;
@@ -385,7 +385,7 @@
         position: relative;
         transition: all 0.1s cubic-bezier(0.25, 1.8, 0.5, 0.9);
         width: calc(100% - 16px);
-        max-width: 560px;
+        max-width: 580px;
         text-decoration: none !important;
         border: none;
     }
@@ -505,9 +505,16 @@
     }
 
     .footer {
-        width: 100%;
-        padding: 24px 16px 16px; /* Reduced bottom padding from 24px to 16px */
-        margin-top: 16px; /* Reduced from 32px to 16px */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 0;
+        background-color: #fff; /* Warna latar belakang footer */
+    }
+
+    .footer-content {
+        margin-bottom: 16px; /* Jarak antara footer dan bottombar */
     }
 
     .footer-button {
@@ -530,7 +537,7 @@
         align-items: center;
         justify-content: center;
         font-family: Inter, sans-serif;
-        font-size: 13px; /* Slightly smaller text */
+        font-size: 16px; /* Perbesar ukuran font dari 13px ke 16px */
         font-weight: 600;
         color: #000000;
         white-space: nowrap;
@@ -541,6 +548,60 @@
         width: auto;
         margin-right: 6px;
         display: block;
+    }
+
+    .footer {
+        margin-top: 8px; /* Kurangi jarak dari elemen sebelumnya */
+        padding: 16px 16px 4px; /* Kurangi padding bawah */
+        margin-bottom: -20px;
+    }
+
+    .footer-button {
+        margin-top: 0; /* Hilangkan jarak tambahan di atas tombol */
+    }
+
+    .bottombar {
+        width: 100%;
+        height: 50px; /* Tinggi default */
+        max-height: 100px; /* Tinggi maksimum */
+        background-color: transparent; /* Bisa diubah jika ingin warna tertentu */
+        margin-top: 16px; /* Jarak dari elemen sebelumnya */
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column; /* Atur konten secara vertikal */
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        background-color: #fff; /* Warna latar belakang */
+    }
+
+    .footer-content {
+        padding: 16px 0;
+        text-align: center;
+        z-index: 1; /* Pastikan berada di atas bottombar */
+    }
+
+    .footer-button {
+        width: 224.3px;
+        height: 48px;
+        margin: 0 auto;
+        padding: 12px 16px;
+        background-color: rgba(255, 255, 255, 0.75);
+        border: 1px solid #E5E5E5;
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .bottombar {
+        width: 100%;
+        height: 1556px; /* Tinggi sesuai permintaan */
+        background-color: transparent; /* Bisa diubah jika ingin warna tertentu */
     }
     </style>
     </head>
@@ -763,8 +824,8 @@
                             <img src="img/grey-sleevetee.jpg" alt="Shop item 1" class="shop-image">
                         </div>
                         <div class="shop-content">
-                            <div class="shop-title">Hollywood Hair Guy® Tools</div>
-                            <div class="shop-subtitle">8 Products</div>
+                            <div class="shop-title">The Dean's List of Daddy Do's (Book)</div>
+                            <div class="shop-subtitle">$14.95</div>
                             <i class="fa fa-ellipsis-v"></i>
                         </div>
                     </a>
@@ -774,8 +835,8 @@
                             <img src="img/blue-shorttee.jpg" alt="Shop item 1" class="shop-image">
                         </div>
                         <div class="shop-content">
-                            <div class="shop-title">Hollywood Hair Guy® Kits</div>
-                            <div class="shop-subtitle">5 Products</div>
+                            <div class="shop-title">One Hour Career Coaching Session with Celebrity Ctylist Dean Banowetz</div>
+                            <div class="shop-subtitle">$349.99</div>
                             <i class="fa fa-ellipsis-v"></i>
                         </div>
                     </a>
@@ -787,8 +848,8 @@
                             <img src="img/grey-sleevetee.jpg" alt="Shop item 1" class="shop-image">
                         </div>
                         <div class="shop-content">
-                            <div class="shop-title">Hollywood Hair Guy® Tools</div>
-                            <div class="shop-subtitle">8 Products</div>
+                            <div class="shop-title">Hollywood Hair Guy® Academy Gift Cards</div>
+                            <div class="shop-subtitle">$100</div>
                             <i class="fa fa-ellipsis-v"></i>
                         </div>
                     </a>
@@ -798,8 +859,8 @@
                             <img src="img/blue-shorttee.jpg" alt="Shop item 1" class="shop-image">
                         </div>
                         <div class="shop-content">
-                            <div class="shop-title">Hollywood Hair Guy® Kits</div>
-                            <div class="shop-subtitle">5 Products</div>
+                            <div class="shop-title">Drag Wig Styling Workshop - May 31st & June 1st, 2025</div>
+                            <div class="shop-subtitle">$749.99</div>
                             <i class="fa fa-ellipsis-v"></i>
                         </div>
                     </a>
@@ -811,8 +872,8 @@
                             <img src="img/grey-sleevetee.jpg" alt="Shop item 1" class="shop-image">
                         </div>
                         <div class="shop-content">
-                            <div class="shop-title">Hollywood Hair Guy® Tools</div>
-                            <div class="shop-subtitle">8 Products</div>
+                            <div class="shop-title">Set Hair 101 Boot Camp - July 12th, 13th, & 14th, 2025</div>
+                            <div class="shop-subtitle">$1,999.99</div>
                             <i class="fa fa-ellipsis-v"></i>
                         </div>
                     </a>
@@ -822,8 +883,8 @@
                             <img src="img/blue-shorttee.jpg" alt="Shop item 1" class="shop-image">
                         </div>
                         <div class="shop-content">
-                            <div class="shop-title">Hollywood Hair Guy® Kits</div>
-                            <div class="shop-subtitle">5 Products</div>
+                            <div class="shop-title">Drag Wig Styling Workshop - August 9th & 10th, 2025</div>
+                            <div class="shop-subtitle">$749.99</div>
                             <i class="fa fa-ellipsis-v"></i>
                         </div>
                     </a>
@@ -835,8 +896,8 @@
                             <img src="img/grey-sleevetee.jpg" alt="Shop item 1" class="shop-image">
                         </div>
                         <div class="shop-content">
-                            <div class="shop-title">Hollywood Hair Guy® Tools</div>
-                            <div class="shop-subtitle">8 Products</div>
+                            <div class="shop-title">Set Hair 101 Boot Camp - September 13th, 14th, </div>
+                            <div class="shop-subtitle">5 Products</div>
                             <i class="fa fa-ellipsis-v"></i>
                         </div>
                     </a>
@@ -846,8 +907,32 @@
                             <img src="img/blue-shorttee.jpg" alt="Shop item 1" class="shop-image">
                         </div>
                         <div class="shop-content">
-                            <div class="shop-title">Hollywood Hair Guy® Kits</div>
-                            <div class="shop-subtitle">5 Products</div>
+                            <div class="shop-title">Drag Wig Styling Workshop - October 18th & 19th, 2025</div>
+                            <div class="shop-subtitle">$749.99</div>
+                            <i class="fa fa-ellipsis-v"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="shop-row">
+                    <a href="https://www.amazon.com/shop/dbano?ref_=cm_sw_r_apin_aipsfshop_aipsfdbano_6XEBGSCHZWQVZDB60PAP" class="shop-button half-width">
+                        <div class="shop-images single-image">
+                            <img src="img/grey-sleevetee.jpg" alt="Shop item 1" class="shop-image">
+                        </div>
+                        <div class="shop-content">
+                            <div class="shop-title">The Dean's List: Breaking into the Hollywood Beauty Biz Virtual Course</div>
+                            <div class="shop-subtitle">$299.99</div>
+                            <i class="fa fa-ellipsis-v"></i>
+                        </div>
+                    </a>
+                
+                    <a href="https://hollywood-hair-guy-merch.printify.me/products" class="shop-button half-width">
+                        <div class="shop-images single-image">
+                            <img src="img/blue-shorttee.jpg" alt="Shop item 1" class="shop-image">
+                        </div>
+                        <div class="shop-content">
+                            <div class="shop-title">Next Level Hair Sheet Virtual Course</div>
+                            <div class="shop-subtitle">$399.99</div>
                             <i class="fa fa-ellipsis-v"></i>
                         </div>
                     </a>
@@ -855,17 +940,20 @@
             </div>
         </div>
 
-        <div class="footer">
-            <a href="https://linktr.ee/?utm_source=linktree&utm_medium=profile&utm_campaign=footer_logo_cta&utm_content=dbano" class="footer-button">
-                <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" height="16px">
-                        <title>Linktree Logo</title>
-                        <desc>Linktree Logo Symbol</desc>
-                        <path d="M13.5108 5.85343L17.5158 1.73642L19.8404 4.11701L15.6393 8.12199H21.5488V11.4268H15.6113L19.8404 15.5345L17.5158 17.8684L11.7744 12.099L6.03299 17.8684L3.70842 15.5438L7.93745 11.4361H2V8.12199H7.90944L3.70842 4.11701L6.03299 1.73642L10.038 5.85343V0H13.5108V5.85343ZM10.038 16.16H13.5108V24.0019H10.038V16.16Z" fill="#000000"></path>
-                    </svg>
-                    <span>Join dbano on Linktree</span>
-                </span>
-            </a>
+        <div class="footer-container">
+            <div class="footer-content">
+                <a class="footer-button">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" height="16px">
+                            <title>Linktree Logo</title>
+                            <desc>Linktree Logo Symbol</desc>
+                            <path d="M13.5108 5.85343L17.5158 1.73642L19.8404 4.11701L15.6393 8.12199H21.5488V11.4268H15.6113L19.8404 15.5345L17.5158 17.8684L11.7744 12.099L6.03299 17.8684L3.70842 15.5438L7.93745 11.4361H2V8.12199H7.90944L3.70842 4.11701L6.03299 1.73642L10.038 5.85343V0H13.5108V5.85343ZM10.038 16.16H13.5108V24.0019H10.038V16.16Z" fill="#000000"></path>
+                        </svg>
+                        <span>Join dbano on Linktree</span>
+                    </span>
+                </a>
+            </div>
+            <div class="bottombar"></div>
         </div>
 
         <script>
