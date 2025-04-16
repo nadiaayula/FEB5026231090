@@ -15,6 +15,19 @@
       padding-top: 50px;
     }
 
+    .topbar {
+        width: 75%;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
     .profile-img {
       width: 120px;
       height: 120px;
@@ -42,81 +55,73 @@
       transition: transform 0.3s ease, color 0.3s ease;
     }
 
-    .social-icons i:hover {
-      transform: scale(1.3);
-      color: #00aced;
-    }
-
     .custom-button {
-      background-color: #f2f2f2;
-      color: #333;
-      border-radius: 15px;
-      padding: 15px 20px;
-      margin: 12px 0;
-      font-size: 0.9rem;
-      color: #333;
-      display: flex;
-      align-items: center;
-      position: relative;
-      justify-content: center;
-      transition: all 0.2s ease;
-      width: 100%;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-      overflow: hidden;
-      border: 1px solid #ddd;
-      height: 70px;
+    background-color: #f2f2f2;
+    color: #333;
+    border-radius: 15px;
+    padding: 15px 20px;
+    margin: 12px 0;
+    font-size: 0.9rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    transition: all 0.2s ease;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    height: 70px;
     }
 
-    .custom-button:hover {
-      background-color: #e0e0e0;
-      transform: scale(1.05);
+    .icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
     }
 
     .icon-img {
-      position: absolute;
-      left: 15px;
-      width: 35px;
-      height: 35px;
-      border-radius: 10px;
-      object-fit: contain;
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
     }
 
-    .button-text {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      white-space: nowrap;
+    .text-wrapper {
+    flex-grow: 1;
+    }
+
+    .custom-button:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
     }
 
     .fa-ellipsis-v {
-      color: #777;
-      position: absolute;
-      right: 15px;
-      transition: 0.3s ease;
-      cursor: pointer;
-      width: 28px;
-      height: 28px;
-      line-height: 28px;
-      text-align: center;
-      border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
     }
 
-    .fa-ellipsis-v:hover {
-      color: #fff;
-      background-color: #393839;
-      transform: scale(1.01);
-    }
+
 
   </style>
 </head>
 <body>
 
+    <div class="topbar">
+        <div class="button-ellipse">
+            <img src="./image/ellipsis-solid.svg">
+        </div>
+    </div>
+
+
   <img src="https://ugc.production.linktr.ee/28f6834b-44da-4ca3-8b43-ac7a25c3a312_20163068a8b0486152f15347dcac67a2-c5-1080x1080.jpeg?io=true&size=avatar-v3_0" alt="Profile" class="profile-img">
 
   <div class="main-title">Dean Banowetz</div>
-  <div class="subtitle">Hollywood Hair Guy ® | Celebrity Hairstylist | TV/Film Hair Education</div>
+  <div class="subtitle">Hollywood Hair Guy ® | Celebrity Hairstylist | 🎬 TV/Film Hair Education</div>
 
   <div class="social-icons">
     <a href="https://instagram.com/dbano" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -128,24 +133,117 @@
   </div>
 
   <div class="container">
+    <a href="https://www.hollywoodhairguycourses.com/offers/k8T7eiGr/checkout" class="custom-button">
+      <div class="icon-wrapper">
+        <img src="img/academy-logo.jpg" class="icon-img" alt="Link 1">
+      </div>
+      <div class="text-wrapper">
+        NEXT WORKSHOP: Drag Wig Styling 5/31 & 6/1
+      </div>
+      <i class="fa fa-ellipsis-v"></i>
+    </a>
     
-    <a href="https://example.com" class="custom-button">
-      <img src="https://your-image-url.jpg" class="icon-img" alt="Link 1">
-      NEXT WORKSHOP: Drag Wig Styling 5/31 & 6/1
+    <a href="https://ktla.com/video/hollywood-hair-dare-dayna-takes-on-drag-wigs/10581428/" class="custom-button">
+      <div class="icon-wrapper">
+        <img src="img/ktla-logo.jpg" class="icon-img" alt="Link 2">
+      </div>
+      <div class="text-wrapper">
+        KTLA: Hollywood Hair Guy® Academy Hair Dare: Dayna Takes on Drag Wigs
+      </div>
       <i class="fa fa-ellipsis-v"></i>
     </a>
+  
+    <a href="https://hollywoodhairguy.com/about" class="custom-button">
+      <div class="icon-wrapper">
+        <img src="img/basic-logo.jpg" class="icon-img" alt="Link 3">
+      </div>
+      <div class="text-wrapper">
+        About Dean Banowetz | Hollywood Hair Guy®
+      </div>
+      <i class="fa fa-ellipsis-v"></i>
+    </a>
+  
+    <a href="https://www.hollywoodhairguycourses.com/courses" class="custom-button">
+      <div class="icon-wrapper">
+        <img src="img/basic-logo.jpg" class="icon-img" alt="Link 4">
+      </div>
+      <div class="text-wrapper">
+        Hollywood Hair Guy® Academy In-Person & Virtual Courses
+      </div>
+      <i class="fa fa-ellipsis-v"></i>
+    </a>
+  
+    <a href="https://www.hollywoodhairguycourses.com/roadmap" class="custom-button">
+      <div class="icon-wrapper">
+        <img src="img/basic-logo.jpg" class="icon-img" alt="Link 5">
+      </div>
+      <div class="text-wrapper">
+        FREE Master Class: Your Hollywood Career Roadmap
+      </div>
+      <i class="fa fa-ellipsis-v"></i>
+    </a>
+  
+    <a href="https://www.hollywoodhairguycourses.com/offers/CfWnXrUs/checkout" class="custom-button">
+      <div class="icon-wrapper">
+        <img src="img/basic-logo.jpg" class="icon-img" alt="Link 6">
+      </div>
+      <div class="text-wrapper">
+        Career Coaching
+      </div>
+      <i class="fa fa-ellipsis-v"></i>
+    </a>
+  
+    <a href="https://www.imdb.com/name/nm1837530/" class="custom-button">
+      <div class="icon-wrapper">
+        <img src="img/imdb-logo.jpg" class="icon-img" alt="Link 7">
+      </div>
+      <div class="text-wrapper">
+        IMDb
+      </div>
+      <i class="fa fa-ellipsis-v"></i>
+    </a>
+  
+    <a href="https://hollywoodhairguy.com/press" class="custom-button">
+      <div class="icon-wrapper">
+        <img src="img/basic-logo.jpg" class="icon-img" alt="Link 8">
+      </div>
+      <div class="text-wrapper">
+        Press
+      </div>
+      <i class="fa fa-ellipsis-v"></i>
+    </a>
+  
+    <a href="https://hollywood-hair-guy-merch.printify.me/" class="custom-button">
+      <div class="icon-wrapper">
+        <img src="img/text-logo.jpg" class="icon-img" alt="Link 9">
+      </div>
+      <div class="text-wrapper">
+        Merch Shop
+      </div>
+      <i class="fa fa-ellipsis-v"></i>
+    </a>
+  
+    <a href="https://www.hollywoodhairguycourses.com/hollywood-hair-guy-academy-private-events-and-parties" class="custom-button">
+      <div class="icon-wrapper">
+        <img src="img/academy-logo.jpg" class="icon-img" alt="Link 10">
+      </div>
+      <div class="text-wrapper">
+        Hollywood Hair Guy® Academy Private Events
+      </div>
+      <i class="fa fa-ellipsis-v"></i>
+    </a>
+  
+    <a href="https://example.com" class="custom-button">
+      <div class="icon-wrapper">
+        <img src="img/ddos-logo.jpg" class="icon-img" alt="Link 11">
+      </div>
+      <div class="text-wrapper">
+        The Dean's List of Daddy Do's
+      </div>
+      <i class="fa fa-ellipsis-v"></i>
+    </a>
+  </div>  
 
-    <a href="https://example.com" class="custom-button">
-      <img src="https://your-image-url.jpg" class="icon-img" alt="Link 2">
-      KTLA: Hollywood Hair Guy® Academy Hair Dare: Dayna Takes on Drag Wigs
-      <i class="fa fa-ellipsis-v"></i>
-    </a>
-
-    <a href="https://example.com" class="custom-button">
-      <img src="https://your-image-url.jpg" class="icon-img" alt="Link 3">
-      Official Merch
-      <i class="fa fa-ellipsis-v"></i>
-    </a>
 
 </body>
 </html>
