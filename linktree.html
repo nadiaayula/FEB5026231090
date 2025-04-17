@@ -416,31 +416,37 @@
     }
 
     .shop-content {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; /* Pastikan teks rata kiri */
+        text-align: left;
         padding: 0 16px;
         position: relative;
+        gap: 4px; /* Jarak antara teks tebal dan teks tipis */
     }
 
     .shop-title {
         font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 600; /* Teks tebal */
         color: #000000;
-        margin-bottom: 0px; /* Reduced from 2px to 0px */
+        margin: 0; /* Hilangkan margin */
     }
 
     .shop-subtitle {
         font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         font-size: 14px;
-        font-weight: 400;
+        font-weight: 400; /* Teks tipis */
         color: rgba(0, 0, 0, 0.5);
-        margin-top: -2px; /* Added negative margin to move up */
+        margin: 0; /* Hilangkan margin */
     }
 
-    .shop-button .fa-ellipsis-v {
+    .shop-content i.fa-ellipsis-v {
         position: absolute;
-        right: 16px; /* Increased from 12px */
-        top: calc(50% + 8px); /* Moved down by increasing the value */
+        right: 16px; /* Jarak dari sisi kanan */
+        top: 50%;
+        transform: translateY(-50%);
         color: #666;
         opacity: 0.7;
         cursor: pointer;
@@ -452,7 +458,7 @@
         gap: 15px;  /* Reduced from 16px */
         margin: 14px auto;
         width: calc(100% - 15px);  /* Reduced from 16px */
-        max-width: 560px;
+        max-width: 580px;
     }
 
     .half-width {
@@ -602,6 +608,27 @@
         width: 100%;
         height: 1556px; /* Tinggi sesuai permintaan */
         background-color: transparent; /* Bisa diubah jika ingin warna tertentu */
+    }
+
+    .shop-button i.fa-ellipsis-v {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 8px; /* Jarak dari konten sebelumnya */
+        font-size: 16px;
+        color: #666;
+        opacity: 0.7;
+        cursor: pointer;
+    }
+
+    .shop-button i.fa-ellipsis-v {
+        position: absolute;
+        right: 16px; /* Jarak dari sisi kanan */
+        bottom: 16px; /* Pindahkan ke pojok bawah */
+        color: #666;
+        opacity: 0.7;
+        cursor: pointer;
+        font-size: 16px;
     }
     </style>
     </head>
@@ -826,8 +853,8 @@
                         <div class="shop-content">
                             <div class="shop-title">The Dean's List of Daddy Do's (Book)</div>
                             <div class="shop-subtitle">$14.95</div>
-                            <i class="fa fa-ellipsis-v"></i>
                         </div>
+                        <i class="fa fa-ellipsis-v"></i> <!-- Pindahkan ikon ke sini -->
                     </a>
                 
                     <a href="https://hollywood-hair-guy-merch.printify.me/products" class="shop-button half-width">
@@ -835,10 +862,10 @@
                             <img src="img/blue-shorttee.jpg" alt="Shop item 1" class="shop-image">
                         </div>
                         <div class="shop-content">
-                            <div class="shop-title">One Hour Career Coaching Session with Celebrity Ctylist Dean Banowetz</div>
+                            <div class="shop-title">One Hour Career Coaching Session with Celebrity Stylist Dean Banowetz</div>
                             <div class="shop-subtitle">$349.99</div>
-                            <i class="fa fa-ellipsis-v"></i>
                         </div>
+                        <i class="fa fa-ellipsis-v"></i> <!-- Pindahkan ikon ke sini -->
                     </a>
                 </div>
 
